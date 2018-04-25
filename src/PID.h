@@ -17,6 +17,10 @@ public:
   double Ki;
   double Kd;
 
+  double previous_cte;
+  double int_cte;
+  int number_of_step;
+  double best_err;
   /*
   * Constructor
   */
@@ -36,6 +40,7 @@ public:
   * Update the PID error variables given cross track error.
   */
   void UpdateError(double cte);
+
 
   /*
   * Calculate the total PID error.
