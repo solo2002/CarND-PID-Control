@@ -39,27 +39,17 @@ Tips for setting up your environment can be found [here](https://classroom.udaci
 
 ## PID Controller
 
-PID stands for Proportional, Integral, and Dervative, respectively. A PID controller is 
+PID stands for Proportional (P), Integral (I), and Dervative (D), respectively. 
 
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+* P is the most significant factor. When the P value is high, the car will make significant turn. When the P value is low, the vehicle is not able to make enough turn in sharp turn of the road.
+* I just like a buffer to reduce the car to reach the center line. 
+* D is to alleviate P's effects. When D is higher, P's effects would be lower, vice versa. 
 
-## Code Style
+The final hyperparameters are tuned as follows. Twiddle is implemented, and tested, which provides the basic range of P, I, D values. Then those values are further refined based on the car running results. 
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
+## Final result
 
-## Project Instructions and Rubric
+A video of final result is available [here](https://youtu.be/4Qff3R-hq24).
 
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
-
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
-for instructions and the project rubric.
-
-## Hints!
-
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
 
 
