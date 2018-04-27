@@ -45,11 +45,11 @@ PID stands for Proportional (P), Integral (I), and Dervative (D), respectively.
 * I just like a buffer to reduce the car to reach the center line. 
 * D is to alleviate P's effects. When D is higher, P's effects would be lower, vice versa. 
 
-The final hyperparameters are tuned as follows. Twiddle is implemented, and tested, which provides the basic range of P, I, D values. Then those values are further refined based on the car running results. 
+The final hyperparameters are tuned as follows. Twiddle is implemented, and tested, which provides the basic range of P, I, D values. Then those values are further refined based on the car running results. For instance, for passing the sharp turn, P value would be increased, and D value should be decreased. However, the reverse approach is taken when the car turns significantly. Interestingly, with twiddle for every step would make the car keep changing direction, and the throttle is no more than 10. The value of tolerance, and different settings of initial values are also examined, but all did not show improved results. Therefore, here twiddle is only used for determining the base range of PID values. PID controller for throttle is not implemented, but I believe it would further improve the autonomus drive performance.
 
 ## Final result
 
-A video of final result is available [here](https://youtu.be/4Qff3R-hq24).
+The final values of P, I, and D are 0.15, 0.00001, and 2.5, respectively, and the highest speed achived is around 45 mph. A video of final result is available [here](https://youtu.be/4Qff3R-hq24).
 
 
 
